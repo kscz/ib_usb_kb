@@ -1,0 +1,21 @@
+[package]
+name = "usb_kb_demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitbang-hal = "0.3"
+apa102-spi = "0.3"
+embedded-hal-02 = {package = "embedded-hal", version = "0.2", features = ["unproven"]}
+panic-halt = "0.2"
+smart-leds = "0.3"
+cortex-m = {version = "0.7", features = ["critical-section-single-core"]}
+usbd-human-interface-device = "0.5.1"
+usbd-serial = "0.2.2"
+
+[dependencies.itsybitsy_m4]
+version = "0.9.1"
+features = [ "usb", "use_rtt" ]
+
+[dependencies.usb-device]
+version = "0.3.1"
